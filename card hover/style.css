@@ -1,0 +1,146 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.Card-hover {
+    width: 100%;
+    height: 99.8vh;
+    background-color: black;
+    padding-top: 8%;
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+/* box1  */
+
+.box1 {
+    width: 25%;
+    height: 80vh;
+    background-color: white;
+    border: 2px solid rgba(128, 128, 128, 0.473);
+}
+
+.bg-img1 {
+    width: 100%;
+    height: 65vh;
+    background-image: url(img/1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hover-card1 {
+    width: 90%;
+    height: 0vh;
+    background: rgba(113, 205, 20, 0.4);
+    transition: all 400ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1:hover .hover-card1{
+    height: 10vh;
+    background: rgba(113, 205, 20, 0.4);
+}
+
+.all-icon{
+    width: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    transition: all 400ms ease;
+}
+
+.eye-icon{
+    height: 5vh;
+    width: 10%;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye-icon i{
+    font-size: 20px;
+}
+
+.heart-icon{
+    height: 5vh;
+    width: 10%;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-icon i{
+    font-size: 20px;
+}
+
+.card-icon{
+    height: 5vh;
+    width: 10%;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon i{
+    font-size: 20px;
+}
+
+.box1:hover .eye-icon{
+    opacity: 1;
+}
+
+.box1:hover .heart-icon{
+    opacity: 1;
+}
+
+.box1:hover .card-icon{
+    opacity: 1;
+}
+
+.box1 h4 {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 5%;
+    margin-left: 5%;
+    transition: all 300ms linear 0s;
+}
+
+.price {
+    margin-top: 5%;
+    margin-left: 5%;
+    font-family: "Heebo", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #2a2a2a;
+}
+
+.price s {
+    margin-left: 5%;
+    color: #797979;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Heebo", sans-serif;
+}
