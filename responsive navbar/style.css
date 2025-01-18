@@ -1,0 +1,134 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.logo{
+    font-size: 40px;
+    padding-left: 5%;
+}
+
+.header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(40px);
+    z-index: -1;
+}
+
+.header::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg , transparent , rgba(255,255,255,.4),transparent);
+    transition: .5s;
+}
+
+.header:hover::after{
+    left: 100%;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    margin-right: 5%;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.icons {
+    /* background-color: red; */
+    height: 100%;
+    position: absolute;
+    right: 5%;
+    /* width: 5%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.icons i {
+    font-size: 20px;
+    color: white;
+}
+
+#check{
+    display: none;
+}
+
+/* media query */
+
+@media(max-width:920px) {
+    .icons {
+        top: 30%;
+        display: block;
+        /* top: 1%; */
+    }
+
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    .icons #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 95px;
+        left: 0%;
+        height: 0%;
+        width: 100%;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        transition: all .3s;
+    }
+    
+    #check:checked~ .navbar{
+       height: 47vh;
+    }
+    .navbar a {
+        display: block;
+        margin: 2%;
+        text-align: center;
+    }
+    
+}
